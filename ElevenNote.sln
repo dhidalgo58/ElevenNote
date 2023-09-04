@@ -5,6 +5,12 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevenNote.WebAPI", "ElevenNote.WebAPI\ElevenNote.WebAPI.csproj", "{6EE6DB50-1E45-4AAB-99C6-68E02D4948DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevenNote.Data", "ElevenNote.Data\ElevenNote.Data.csproj", "{063C7E70-719E-499E-A00A-9F4CA3AD1A09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevenNote.Models", "ElevenNote.Models\ElevenNote.Models.csproj", "{0C079434-BE09-4C7B-8C3E-B0711BE59ADC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevenNote.Services", "ElevenNote.Services\ElevenNote.Services.csproj", "{83390F42-7ABA-4243-8D56-7747A31D346B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,17 @@ Global
 		{6EE6DB50-1E45-4AAB-99C6-68E02D4948DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EE6DB50-1E45-4AAB-99C6-68E02D4948DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EE6DB50-1E45-4AAB-99C6-68E02D4948DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{063C7E70-719E-499E-A00A-9F4CA3AD1A09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{063C7E70-719E-499E-A00A-9F4CA3AD1A09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{063C7E70-719E-499E-A00A-9F4CA3AD1A09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{063C7E70-719E-499E-A00A-9F4CA3AD1A09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C079434-BE09-4C7B-8C3E-B0711BE59ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C079434-BE09-4C7B-8C3E-B0711BE59ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C079434-BE09-4C7B-8C3E-B0711BE59ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C079434-BE09-4C7B-8C3E-B0711BE59ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83390F42-7ABA-4243-8D56-7747A31D346B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83390F42-7ABA-4243-8D56-7747A31D346B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83390F42-7ABA-4243-8D56-7747A31D346B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83390F42-7ABA-4243-8D56-7747A31D346B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
