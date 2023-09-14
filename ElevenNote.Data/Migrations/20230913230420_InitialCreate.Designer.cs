@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ElevenNote.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230907003848_InitialCreate")]
+    [Migration("20230913230420_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
