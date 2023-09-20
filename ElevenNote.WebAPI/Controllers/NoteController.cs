@@ -39,5 +39,25 @@ namespace ElevenNote.WebAPI.Controllers
 
             return BadRequest("Note could not be created.");
         }
+
+        [HttpGet("{noteId:int}")]
+        public async Task<IActionResult> GetNoteById([FromRoute] int noteId)
+        {
+            var detail = await _noteService.GetNoteByIdAsync(noteId);
+
+            return detail is not null
+                ? Ok(detail) : NotFound();
+        }
+
+        [HttpPut]  
+        public async Task<IActionResult> UpdateNoteById([FromBody] NoteUpdate request)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return await _noteService.UpdateNoteAsync(request)
+                ? Ok("Note updated successfully.")
+                : BadRequest("could not bt updated");
+        }
     }
 }

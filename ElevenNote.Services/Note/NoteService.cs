@@ -57,5 +57,36 @@ namespace ElevenNote.Services.Note
                 .ToListAsync();
             return notes;
         }
+
+        public async Task<NoteDetail> GetNoteByIdAsync(int noteId)
+        {
+            var noteEntity = await _dbContext.Notes
+                .FirstOrDefaultAsync(e => e.Id == noteId && e.OwnerId == _userId);
+
+            return noteEntity is null ? null : new NoteDetail
+            {
+                Id = noteEntity.Id,
+                Title = noteEntity.Title,
+                Content = noteEntity.Content,
+                CreatedUtc = noteEntity.CreatedUtc,
+                ModifiedUtc = noteEntity.ModifiedUtc
+            };
+        }
+
+        public async Task<bool> UpdateNoteAsync(NoteUpdate request)
+        {
+            var noteEntity = await _dbContext.Notes.FindAsync(request.Id);
+
+            if (noteEntity?.OwnerId != _userId)
+                return false;
+
+            noteEntity.Title = request.Title;
+            noteEntity.Content = request.Content;
+            noteEntity.ModifiedUtc = DateTimeOffset.Now;
+
+            var numberofChanges = await _dbContext.SaveChangesAsync();
+
+            return numberofChanges == 1;
+        }
     }
 }
