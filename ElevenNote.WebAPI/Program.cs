@@ -1,4 +1,5 @@
 using ElevenNote.Data;
+using ElevenNote.Models.Maps;
 using ElevenNote.Services.Note;
 using ElevenNote.Services.Token;
 using ElevenNote.Services.User;
@@ -49,6 +50,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ITokenService,  TokenService>();
 builder.Services.AddScoped<INoteService, NoteService>();
+builder.Services.AddAutoMapper(typeof(NoteMapProfile));
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {

@@ -22,6 +22,7 @@ namespace ElevenNote.WebAPI.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<NoteListItem>), 200)]
         public async Task<IActionResult> GetAllNotes()
         {
             var notes = await _noteService.GetAllNotesAsync();
